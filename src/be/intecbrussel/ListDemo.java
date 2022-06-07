@@ -1,6 +1,7 @@
 package be.intecbrussel;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 public class ListDemo {
