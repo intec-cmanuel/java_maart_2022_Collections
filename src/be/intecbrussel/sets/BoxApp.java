@@ -1,6 +1,7 @@
 package be.intecbrussel.sets;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class BoxApp {
     public static void main(String[] args) {
@@ -15,6 +16,9 @@ public class BoxApp {
         myBoxes.add(box3);
         myBoxes.add(box4);
 
+        myBoxes = myBoxes.stream()
+                .distinct()
+                .collect(Collectors.toList());
         System.out.println("LIST: " + myBoxes);
 
         Set<Box> myUniqueBoxes = new LinkedHashSet<>();

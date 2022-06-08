@@ -37,6 +37,10 @@ public class Box implements Comparable<Box>{
         this.width = width;
     }
 
+    public int getVolume() {
+        return height * length * width;
+    }
+
     @Override
     public String toString() {
         return "B{" +
