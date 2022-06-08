@@ -2,7 +2,7 @@ package be.intecbrussel.sets;
 
 import java.util.Objects;
 
-public class Box {
+public class Box implements Comparable<Box>{
     private int height;
     private int length;
     private int width;
@@ -39,10 +39,10 @@ public class Box {
 
     @Override
     public String toString() {
-        return "Box{" +
+        return "B{" +
                 "h=" + height +
-                ", l=" + length +
-                ", w=" + width +
+                ",l=" + length +
+                ",w=" + width +
                 '}';
     }
 
@@ -57,5 +57,10 @@ public class Box {
     @Override
     public int hashCode() {
         return Objects.hash(height, length, width);
+    }
+
+    @Override
+    public int compareTo(Box o) {
+        return this.height - o.height;
     }
 }
